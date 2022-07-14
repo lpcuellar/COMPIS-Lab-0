@@ -129,4 +129,13 @@ dmypy.json
 .pyre/
 
 # PDF Files
-*.pdf
+*.pdf 
+
+# FILES FOR JAVA
+*.class
+*.tokens
+*.java
+*.interp
+
+# ANTLR
+/.idea
