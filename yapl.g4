@@ -21,9 +21,9 @@ feature
 formal
    : OBJECTID ':' TYPEID
    ;
+
 /* method argument */
-   
-   
+
 expression
    : expression ('@' TYPEID)? '.' OBJECTID '(' (expression (',' expression)*)? ')' # methodCall
    | OBJECTID '(' (expression (',' expression)*)? ')' # ownMethodCall
@@ -51,7 +51,8 @@ expression
    | FALSE # false
    | OBJECTID ASSIGNMENT expression # assignment
    ;
-   // key words
+
+// key words
    
 CLASS
    : C L A S S
@@ -128,7 +129,8 @@ NOT
 TRUE
    : 't' R U E
    ;
-   // primitives
+
+// primitives
    
 STRING
    : '"' (ESC | ~ ["\\])* '"'
@@ -265,7 +267,8 @@ fragment UNICODE
 fragment HEX
    : [0-9a-fA-F]
    ;
-   // comments
+
+// comments
    
 OPEN_COMMENT
    : '(*'
